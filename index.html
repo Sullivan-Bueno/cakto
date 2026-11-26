@@ -1,295 +1,284 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planilha de Controle Financeiro</title>
+  <head>
+    <script>
+      fbq("track", "ViewContent");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planilha de Controle Financeiro</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-body {
-    font-family: Georgia, serif;
-    background: #f8f1e5;
-    color: #292719;
-}
+      body {
+        font-family: Georgia, serif;
+        background: #f8f1e5;
+        color: #292719;
+      }
 
-.container {
-    max-width: 1050px;
-    margin: auto;
-    padding: 25px;
-}
+      .container {
+        max-width: 1050px;
+        margin: auto;
+        padding: 25px;
+      }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+      }
 
-.logo {
-    color: #40501f;
-    font-size: 21px;
-    font-weight: bold;
-}
+      .logo {
+        color: #40501f;
+        font-size: 21px;
+        font-weight: bold;
+      }
 
-header a {
-    text-decoration: none;
-    color: #40501f;
-    font-size: 15px;
-}
+      header a {
+        text-decoration: none;
+        color: #40501f;
+        font-size: 15px;
+      }
 
-.hero {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 65px 0;
-}
+      .hero {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 65px 0;
+      }
 
-.hero-content {
-    flex: 1;
-}
+      .hero-content {
+        flex: 1;
+      }
 
-.tag {
-    color: #65723c;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
+      .tag {
+        color: #65723c;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+      }
 
-h1 {
-    font-size: clamp(36px, 5vw, 55px);
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
+      h1 {
+        font-size: clamp(36px, 5vw, 55px);
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
 
-h1 span {
-    color: #63733a;
-}
+      h1 span {
+        color: #63733a;
+      }
 
-.hero p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #625d4c;
-    margin-bottom: 28px;
-}
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #625d4c;
+        margin-bottom: 28px;
+      }
 
-.hero img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 16px;
-    box-shadow: 0 12px 35px #574b3020;
-}
+      .hero img {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px #574b3020;
+      }
 
-.btn {
-    display: inline-block;
-    background: #455522;
-    color: white;
-    padding: 17px 28px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    transition: .3s;
-}
+      .btn {
+        display: inline-block;
+        background: #455522;
+        color: white;
+        padding: 17px 28px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        transition: 0.3s;
+      }
 
-.btn:hover {
-    background: #303d16;
-    transform: translateY(-2px);
-}
+      .btn:hover {
+        background: #303d16;
+        transform: translateY(-2px);
+      }
 
-.benefits {
-    background: #eae4d4;
-    padding: 40px 25px;
-    border-radius: 14px;
-    text-align: center;
-}
-
-.benefits h2 {
-    font-size: 29px;
-    margin-bottom: 28px;
-}
-
-.benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.benefit {
-    padding: 15px;
-}
-
-.benefit strong {
-    display: block;
-    color: #455522;
-    font-size: 19px;
-    margin-bottom: 8px;
-}
-
-.benefit p {
-    color: #696451;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-.offer {
-    text-align: center;
-    padding: 65px 15px;
-}
-
-.offer h2 {
-    font-size: 34px;
-    margin-bottom: 15px;
-}
-
-.offer p {
-    color: #696451;
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #77715f;
-    border-top: 1px solid #ded5c3;
-    font-size: 13px;
-}
-
-@media(max-width: 700px) {
-    .hero {
-        flex-direction: column;
+      .benefits {
+        background: #eae4d4;
+        padding: 40px 25px;
+        border-radius: 14px;
         text-align: center;
-        padding: 40px 0;
-    }
+      }
 
-    .hero img {
-        max-width: 100%;
-    }
+      .benefits h2 {
+        font-size: 29px;
+        margin-bottom: 28px;
+      }
 
-    .benefit-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+      .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
 
-    header {
-        flex-direction: column;
-        gap: 12px;
-    }
+      .benefit {
+        padding: 15px;
+      }
 
-    .offer h2 {
-        font-size: 28px;
-    }
-}
-</style>
-</head>
+      .benefit strong {
+        display: block;
+        color: #455522;
+        font-size: 19px;
+        margin-bottom: 8px;
+      }
 
-<body>
+      .benefit p {
+        color: #696451;
+        font-size: 15px;
+        line-height: 1.5;
+      }
 
-<div class="container">
+      .offer {
+        text-align: center;
+        padding: 65px 15px;
+      }
 
-<header>
-    <div class="logo">✦ Controle Financeiro</div>
-    <a href="#comprar">Adquira sua planilha</a>
-</header>
+      .offer h2 {
+        font-size: 34px;
+        margin-bottom: 15px;
+      }
 
-<section class="hero">
+      .offer p {
+        color: #696451;
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
 
-    <div class="hero-content">
-        <div class="tag">Mais organização, menos preocupação</div>
+      footer {
+        text-align: center;
+        padding: 25px;
+        color: #77715f;
+        border-top: 1px solid #ded5c3;
+        font-size: 13px;
+      }
 
-        <h1>
+      @media (max-width: 700px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 0;
+        }
+
+        .hero img {
+          max-width: 100%;
+        }
+
+        .benefit-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .offer h2 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      fbq("track", "ViewContent");
+    </script>
+    <div class="container">
+      <header>
+        <div class="logo">✦ Controle Financeiro</div>
+        <a href="#comprar">Adquira sua planilha</a>
+      </header>
+
+      <section class="hero">
+        <div class="hero-content">
+          <div class="tag">Mais organização, menos preocupação</div>
+
+          <h1>
             Assuma o controle das suas
             <span>finanças!</span>
-        </h1>
+          </h1>
+
+          <p>
+            Organize suas receitas, despesas e metas em uma única planilha.
+            Tenha clareza sobre seu dinheiro e conquiste uma vida financeira
+            mais tranquila.
+          </p>
+
+          <a href="https://pay.cakto.com.br/rtkwvct_1373122" class="btn">
+            QUERO MINHA PLANILHA →
+          </a>
+        </div>
+
+        <div>
+          <img src="./capa.png" alt="Planilha de Controle Financeiro" />
+        </div>
+      </section>
+
+      <section class="benefits">
+        <h2>Tudo o que você precisa!</h2>
+
+        <div class="benefit-grid">
+          <div class="benefit">
+            <strong>✓ Receitas e despesas</strong>
+            <p>Controle tudo o que entra e sai do seu bolso.</p>
+          </div>
+
+          <div class="benefit">
+            <strong>✓ Resumo automático</strong>
+            <p>Visualize seus resultados de forma simples.</p>
+          </div>
+
+          <div class="benefit">
+            <strong>✓ Metas financeiras</strong>
+            <p>Planeje suas economias e conquiste objetivos.</p>
+          </div>
+
+          <div class="benefit">
+            <strong>✓ Gráficos claros</strong>
+            <p>Entenda para onde seu dinheiro está indo.</p>
+          </div>
+
+          <div class="benefit">
+            <strong>✓ Fácil de usar</strong>
+            <p>Organização financeira sem complicação.</p>
+          </div>
+
+          <div class="benefit">
+            <strong>✓ Pronta e editável</strong>
+            <p>Personalize a planilha conforme sua rotina.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="offer" id="comprar">
+        <h2>Sua vida financeira merece essa mudança!</h2>
 
         <p>
-            Organize suas receitas, despesas e metas
-            em uma única planilha. Tenha clareza sobre
-            seu dinheiro e conquiste uma vida financeira
-            mais tranquila.
+          Comece hoje a organizar seu dinheiro, acompanhar suas metas e
+          construir um futuro mais tranquilo.
         </p>
 
         <a href="https://pay.cakto.com.br/rtkwvct_1373122" class="btn">
-            QUERO MINHA PLANILHA →
+          QUERO COMPRAR AGORA →
         </a>
+      </section>
     </div>
 
-    <div>
-        <img
-        src="./capa.png"
-        alt="Planilha de Controle Financeiro">
-    </div>
-
-</section>
-
-<section class="benefits">
-    <h2>Tudo o que você precisa!</h2>
-
-    <div class="benefit-grid">
-
-        <div class="benefit">
-            <strong>✓ Receitas e despesas</strong>
-            <p>Controle tudo o que entra e sai do seu bolso.</p>
-        </div>
-
-        <div class="benefit">
-            <strong>✓ Resumo automático</strong>
-            <p>Visualize seus resultados de forma simples.</p>
-        </div>
-
-        <div class="benefit">
-            <strong>✓ Metas financeiras</strong>
-            <p>Planeje suas economias e conquiste objetivos.</p>
-        </div>
-
-        <div class="benefit">
-            <strong>✓ Gráficos claros</strong>
-            <p>Entenda para onde seu dinheiro está indo.</p>
-        </div>
-
-        <div class="benefit">
-            <strong>✓ Fácil de usar</strong>
-            <p>Organização financeira sem complicação.</p>
-        </div>
-
-        <div class="benefit">
-            <strong>✓ Pronta e editável</strong>
-            <p>Personalize a planilha conforme sua rotina.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="offer" id="comprar">
-
-    <h2>Sua vida financeira merece essa mudança!</h2>
-
-    <p>
-        Comece hoje a organizar seu dinheiro,
-        acompanhar suas metas e construir
-        um futuro mais tranquilo.
-    </p>
-
-    <a href="https://pay.cakto.com.br/rtkwvct_1373122" class="btn">
-        QUERO COMPRAR AGORA →
-    </a>
-
-</section>
-
-</div>
-
-<footer>
-    © 2026 Controle Financeiro. Todos os direitos reservados.
-</footer>
-
-</body>
+    <footer>© 2026 Controle Financeiro. Todos os direitos reservados.</footer>
+  </body>
 </html>
