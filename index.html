@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <script>
-      fbq("track", "ViewContent");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planilha de Controle Financeiro</title>
@@ -91,7 +88,7 @@
 
       .btn {
         display: inline-block;
-        background: #455522;
+        background: #c62828;
         color: white;
         padding: 17px 28px;
         border-radius: 7px;
@@ -99,11 +96,28 @@
         font-family: Arial, sans-serif;
         font-weight: bold;
         transition: 0.3s;
+        text-align: center;
       }
 
       .btn:hover {
-        background: #303d16;
+        background: #991b1b;
         transform: translateY(-2px);
+      }
+
+      .promo-label {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        margin-bottom: 5px;
+        color: #ffe0e0;
+      }
+
+      .delivery-info {
+        margin-top: 14px;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #696451;
       }
 
       .benefits {
@@ -156,6 +170,18 @@
         font-size: 17px;
         line-height: 1.6;
         margin-bottom: 25px;
+      }
+
+      .delivery-box {
+        background: #eae4d4;
+        border-radius: 10px;
+        padding: 18px;
+        margin: 25px auto;
+        max-width: 520px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #40501f;
       }
 
       footer {
@@ -231,9 +257,6 @@
   </head>
 
   <body>
-    <script>
-      fbq("track", "ViewContent");
-    </script>
     <div class="container">
       <header>
         <div class="logo">✦ Controle Financeiro</div>
@@ -256,8 +279,15 @@
           </p>
 
           <a href="https://pay.cakto.com.br/rtkwvct_1373122" class="btn">
+            <span class="promo-label">OFERTA PROMOCIONAL</span>
+            <span class="price">R$ 15,94</span>
             QUERO MINHA PLANILHA →
           </a>
+
+          <div class="delivery-info">
+            <span>📩</span> Receba sua planilha diretamente no e-mail após a
+            confirmação do pagamento.
+          </div>
         </div>
 
         <div>
@@ -309,8 +339,16 @@
           construir um futuro mais tranquilo.
         </p>
 
+        <div class="delivery-box">
+          📩 <strong>Entrega digital automática!</strong><br />
+          Após a confirmação do pagamento, sua planilha será enviada diretamente
+          para o e-mail informado na compra.
+        </div>
+
         <a href="https://pay.cakto.com.br/rtkwvct_1373122" class="btn">
-          QUERO COMPRAR AGORA →
+          <span class="promo-label">OFERTA PROMOCIONAL</span>
+          <span class="price">R$ 15,94</span>
+          QUERO MINHA PLANILHA →
         </a>
       </section>
     </div>
